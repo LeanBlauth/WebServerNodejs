@@ -1,25 +1,14 @@
-var http = require('http');
-var fs = require('fs');
+var express = require('express');
+var app = express();
 
-// Executed when a requests event happens
-http.createServer(function(req, res) {
-    
-    if (req.url === '/') {
-        fs.createReadStream(__dirname + '/index.htm').pipe(res);
-    }
-    
-    else if (req.url === '/json') {
-        res.writeHead(200, { 'Content-Type': 'application/json'} );
-        var obj = {
-            firstname: 'Rudolph',
-            lastname: 'Reindeer'
-        };
-        res.end(JSON.stringify(obj));
-    }
+var port = process.env.PORT || 3000;
 
-    else {
-        res.writeHead(404);
-        res.end();
-    }
+app.get('/', function(req, res){
+    res.send('<html><head></head><body></body><h1>Hi my name is Rudolph!</h1></html>')
+});
 
-}).listen(1337, '127.0.0.1');
+app.get('/api', function(req, res){
+    res.json({ firstname: "Rudolph", lastname: "Reindeer" });
+});
+
+app.listen(port);
