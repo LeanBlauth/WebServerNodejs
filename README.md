@@ -9,3 +9,5 @@ Web Server project developed in nodejs
 - NPM Express module
 - EJS template engine
 - RESTful API http response standard
+- MySQL database
+- NoSQL: MongoDB
