@@ -8,3 +8,4 @@ Web Server project developed in nodejs
 - NPM package manager
 - NPM Express module
 - EJS template engine
+- RESTful API http response standard
