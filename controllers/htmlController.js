@@ -1,10 +1,5 @@
 module.exports = function(app) {
 
-    app.use('/', function (req, res, next) {
-        console.log('Request URL: ' + req.url);
-        next();
-    });
-
     app.get('/', function(req, res) {
         res.render('index');
     });
