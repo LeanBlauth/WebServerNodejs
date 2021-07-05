@@ -11,3 +11,4 @@ Web Server project developed in nodejs
 - MySQL database
 - NoSQL: MongoDB
 - RESTful API http response standard
+- Basic CRUD (create read update delete) API functionality
